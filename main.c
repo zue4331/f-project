@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+char card[4][13];
+int c1, c2;
+
+int initC() {
+	c1 = 1;
+	while (c1 <= 4) {
+		c2 = 0;
+		while (c2 < 13) {
+			if (c1 == 1) {
+				card[c1][c2] = 'A' + c2;
+			}
+			else if (c1 == 2) {
+				card[c1][c2] = 'N' + c2;
+			}
+			else if (c1 == 3) {
+				card[c1][c2] = 'a' + c2;
+			}
+			else if (c1 == 4) card[c1][c2] = 'n' + c2;
+			c2 = c2 + 1;
+			printf("%c", card[c1][c2]);
+		}
+		c1 = c1 + 1;
+		printf("\n");
+	}
+}
+
+int main() {
+
+	initC;
+	printf("%s", card[1][1]);
+	return 0;
+
+}
